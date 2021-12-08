@@ -1,0 +1,12 @@
+{
+    "image1": {
+        "Est-ce qu'il y a un chien dans cette image?": [
+            "Oui",
+            "Non"
+        ],
+        "Est-ce qu'il y a un chat dans cette image?": [
+            "Oui",
+            "Non"
+        ]
+    }
+}
