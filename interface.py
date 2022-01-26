@@ -6,7 +6,8 @@ from tkinter.font import families
 from appJar import gui
 import model
 app = gui("interface", "1000x700")
-path = model.lire_fichier[0] #pour accéder au répertoire d'image avec appjar utiliser: .setImageLocation(location)
+# pour accéder au répertoire d'image avec appjar utiliser: .setImageLocation(location)
+path = model.lire_fichier[0]
 image = ImageTk.PhotoImage(Image.open("C:/Users/Omar/Downloads/a.jpg"))
 
 
