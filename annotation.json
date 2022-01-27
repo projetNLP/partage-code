@@ -1,18 +1,5 @@
 {
-    "$Recycle.Bin": {
-        "comment\u00e9": true,
-        "question 1": "q",
-        "r\u00e9ponse 1": 1,
-        "question 2": "q",
-        "r\u00e9ponse 2": 2,
-        "question 3": "q",
-        "r\u00e9ponse 3": 3,
-        "question 4": "q",
-        "r\u00e9ponse 4": 4,
-        "question 5": "q",
-        "r\u00e9ponse 5": 5
-    },
-    "$SysReset": {
+    "1594451960173_IMG_20200711_141320_mr1594451959955_mh1594451969430.jpg": {
         "comment\u00e9": false,
         "question 1": "q",
         "r\u00e9ponse 1": "",
@@ -25,7 +12,7 @@
         "question 5": "q",
         "r\u00e9ponse 5": ""
     },
-    "$WinREAgent": {
+    "19.JPG": {
         "comment\u00e9": false,
         "question 1": "q",
         "r\u00e9ponse 1": "",
@@ -38,7 +25,7 @@
         "question 5": "q",
         "r\u00e9ponse 5": ""
     },
-    "Documents and Settings": {
+    "23.jpg": {
         "comment\u00e9": false,
         "question 1": "q",
         "r\u00e9ponse 1": "",
@@ -51,7 +38,7 @@
         "question 5": "q",
         "r\u00e9ponse 5": ""
     },
-    "DumpStack.log.tmp": {
+    "34.JPG": {
         "comment\u00e9": false,
         "question 1": "q",
         "r\u00e9ponse 1": "",
@@ -64,7 +51,7 @@
         "question 5": "q",
         "r\u00e9ponse 5": ""
     },
-    "hiberfil.sys": {
+    "CIMG1199.JPG": {
         "comment\u00e9": false,
         "question 1": "q",
         "r\u00e9ponse 1": "",
@@ -77,7 +64,7 @@
         "question 5": "q",
         "r\u00e9ponse 5": ""
     },
-    "i4Tools7": {
+    "CIMG1942.JPG": {
         "comment\u00e9": false,
         "question 1": "q",
         "r\u00e9ponse 1": "",
@@ -90,7 +77,7 @@
         "question 5": "q",
         "r\u00e9ponse 5": ""
     },
-    "Intel": {
+    "DSC_0002.JPG": {
         "comment\u00e9": false,
         "question 1": "q",
         "r\u00e9ponse 1": "",
@@ -103,137 +90,7 @@
         "question 5": "q",
         "r\u00e9ponse 5": ""
     },
-    "OneDriveTemp": {
-        "comment\u00e9": false,
-        "question 1": "q",
-        "r\u00e9ponse 1": "",
-        "question 2": "q",
-        "r\u00e9ponse 2": "",
-        "question 3": "q",
-        "r\u00e9ponse 3": "",
-        "question 4": "q",
-        "r\u00e9ponse 4": "",
-        "question 5": "q",
-        "r\u00e9ponse 5": ""
-    },
-    "pagefile.sys": {
-        "comment\u00e9": false,
-        "question 1": "q",
-        "r\u00e9ponse 1": "",
-        "question 2": "q",
-        "r\u00e9ponse 2": "",
-        "question 3": "q",
-        "r\u00e9ponse 3": "",
-        "question 4": "q",
-        "r\u00e9ponse 4": "",
-        "question 5": "q",
-        "r\u00e9ponse 5": ""
-    },
-    "PerfLogs": {
-        "comment\u00e9": false,
-        "question 1": "q",
-        "r\u00e9ponse 1": "",
-        "question 2": "q",
-        "r\u00e9ponse 2": "",
-        "question 3": "q",
-        "r\u00e9ponse 3": "",
-        "question 4": "q",
-        "r\u00e9ponse 4": "",
-        "question 5": "q",
-        "r\u00e9ponse 5": ""
-    },
-    "Program Files": {
-        "comment\u00e9": false,
-        "question 1": "q",
-        "r\u00e9ponse 1": "",
-        "question 2": "q",
-        "r\u00e9ponse 2": "",
-        "question 3": "q",
-        "r\u00e9ponse 3": "",
-        "question 4": "q",
-        "r\u00e9ponse 4": "",
-        "question 5": "q",
-        "r\u00e9ponse 5": ""
-    },
-    "Program Files (x86)": {
-        "comment\u00e9": false,
-        "question 1": "q",
-        "r\u00e9ponse 1": "",
-        "question 2": "q",
-        "r\u00e9ponse 2": "",
-        "question 3": "q",
-        "r\u00e9ponse 3": "",
-        "question 4": "q",
-        "r\u00e9ponse 4": "",
-        "question 5": "q",
-        "r\u00e9ponse 5": ""
-    },
-    "ProgramData": {
-        "comment\u00e9": false,
-        "question 1": "q",
-        "r\u00e9ponse 1": "",
-        "question 2": "q",
-        "r\u00e9ponse 2": "",
-        "question 3": "q",
-        "r\u00e9ponse 3": "",
-        "question 4": "q",
-        "r\u00e9ponse 4": "",
-        "question 5": "q",
-        "r\u00e9ponse 5": ""
-    },
-    "Recovery": {
-        "comment\u00e9": false,
-        "question 1": "q",
-        "r\u00e9ponse 1": "",
-        "question 2": "q",
-        "r\u00e9ponse 2": "",
-        "question 3": "q",
-        "r\u00e9ponse 3": "",
-        "question 4": "q",
-        "r\u00e9ponse 4": "",
-        "question 5": "q",
-        "r\u00e9ponse 5": ""
-    },
-    "swapfile.sys": {
-        "comment\u00e9": false,
-        "question 1": "q",
-        "r\u00e9ponse 1": "",
-        "question 2": "q",
-        "r\u00e9ponse 2": "",
-        "question 3": "q",
-        "r\u00e9ponse 3": "",
-        "question 4": "q",
-        "r\u00e9ponse 4": "",
-        "question 5": "q",
-        "r\u00e9ponse 5": ""
-    },
-    "System Volume Information": {
-        "comment\u00e9": false,
-        "question 1": "q",
-        "r\u00e9ponse 1": "",
-        "question 2": "q",
-        "r\u00e9ponse 2": "",
-        "question 3": "q",
-        "r\u00e9ponse 3": "",
-        "question 4": "q",
-        "r\u00e9ponse 4": "",
-        "question 5": "q",
-        "r\u00e9ponse 5": ""
-    },
-    "Users": {
-        "comment\u00e9": false,
-        "question 1": "q",
-        "r\u00e9ponse 1": "",
-        "question 2": "q",
-        "r\u00e9ponse 2": "",
-        "question 3": "q",
-        "r\u00e9ponse 3": "",
-        "question 4": "q",
-        "r\u00e9ponse 4": "",
-        "question 5": "q",
-        "r\u00e9ponse 5": ""
-    },
-    "Windows": {
+    "DSC_0086.JPG": {
         "comment\u00e9": false,
         "question 1": "q",
         "r\u00e9ponse 1": "",
