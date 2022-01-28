@@ -20,21 +20,20 @@ def retrouve_image():
             return img
 
 def image_precedente(image):
-    liste_image = os.walk(lire_fichier()[1]).next()[2]
+    liste_image = os.walk(lire_fichier()[0]).__next__()[2]
     try:
         for i in range(len(liste_image)):
-            liste_image liste_image[i] == image:
+            if liste_image[i] == image:
                 return liste_image[i-1]
     except: 
         print("image non trouvable.")
 
-def lire_annote_image(image):
+def change_commente(image):
     with open('annotation.json', "r") as f:
         liste_images = json.load(f)
     donnee = liste_images[image]
-    liste_questions = [donnee[i] for i in donnee if i[0] == 'q']
-    liste_reponses = [donnee[i] for i in donnee if i[0] == 'r']
-    return liste_questions, liste_reponses
+    donnee["commenté"]=False
+
 
 
 # enregistre les reponses dans le fichier annote, à faire appeler dans l'interface, img est l'entrée de def interface(imge, Q, L)

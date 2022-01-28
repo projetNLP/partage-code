@@ -7,8 +7,8 @@
     "r2": "oui\\non",
     "q3": "Aimez-vous cette image?",
     "r3": "oui\\non",
-    "q4": "",
-    "r4": "",
-    "q5": "",
-    "r5": ""
+    "q4": "Fait-il jour ou nuit?",
+    "r4": "jour\\nuit",
+    "q5": "Y a-t-il un chat?",
+    "r5": "oui\\non"
 }

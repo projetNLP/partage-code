@@ -1,5 +1,6 @@
 from PIL import Image, ImageTk
 from appJar import gui
+
 import model
 
 app = gui("interface", "1000x700")
@@ -13,25 +14,29 @@ def suivant():
     image = Image.open(model.lire_fichier()[0] + '/' + model.retrouve_image())
     image_resize = ImageTk.PhotoImage(image.resize((600, 600)))
     app.setImageData("pic", image_resize, fmt="PhotoImage")
+    app.clearAllOptionBoxes()
     
 def precedent():
-    Q, L = model.lire_annote_image(image)
-    app.stop()
-    #la ligne suivante à modifier
-    interface(image_resize, Q, L)
+    image = model.image_precedente(model.retrouve_image())
+    image_precedent = Image.open(model.lire_fichier()[0] + '/' + image)
+    model.change_commente(image)
+    image_resize = ImageTk.PhotoImage(image_precedent.resize((600, 600)))
+    app.setImageData("pic", image_resize, fmt="PhotoImage")
 
 def interface(image_resize, Q, L):
-    app.setFont(size=14, family="Verdana", underline=False, slant="roman")
+    app.setFont(size=25, family="Arial", underline=False, slant="roman")
 
     with app.frame("LEFT", row=0, column=0, bg='white', fg='black'):
-        app.addLabel("en-tête", "outil de classification d'images")
-        app.setLabelBg("en-tête", "DarkCyan")
+        app.addLabel("en-tête", "Outil de classification d'images")
+        app.setLabelBg("en-tête", "indianred")
+        app.setLabelFg("en-tête", "Snow")
         app.setLabelHeight("en-tête", 1)
         app.addImageData("pic", image_resize, fmt="PhotoImage")
-        app.addButton("precedent", precedent)
-        app.setButtonBg("precedent", "firebrick")
-        app.setButtonWidth("precedent", 5)
-        app.setButtonHeight("precedent", 1)
+        app.addButton("Precedent", precedent)
+        app.setButtonBg("Precedent", "PowderBlue")
+        app.setButtonFg("Precedent", "black")
+        app.setButtonWidth("Precedent", 5)
+        app.setButtonHeight("Precedent", 1)
 
     with app.frame("RIGHT", row=0, column=1, bg='white', fg='black'):
         for x in range(len(Q)):
@@ -39,11 +44,11 @@ def interface(image_resize, Q, L):
             app.addLabelOptionBox(str(x), ["- select -"]+L[x])
             app.setLabelBg(Q[x], "bisque")
 
-        app.addButton("suivant", suivant)
-        app.setButtonFg("suivant", "white")
-        app.setButtonBg("suivant", "limegreen")
-        app.setButtonWidth("suivant", 5)
-        app.setButtonHeight("suivant", 1)
+        app.addButton("Suivant", suivant)
+        app.setButtonFg("Suivant", "white")
+        app.setButtonBg("Suivant", "RoyalBlue")
+        app.setButtonWidth("Suivant", 5)
+        app.setButtonHeight("Suivant", 1)
 
     app.go()
 
