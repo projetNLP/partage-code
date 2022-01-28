@@ -1,14 +1,14 @@
 {
-    "lot": "AV7701",
-    "path": "C:\/Users\/Sun\/Documents\/pictures_test",
-    "q1": "q1",
-    "r1": "oui\\non",
-    "q2": "q2",
+    "lot": "template",
+    "path": "C:\\Users\\Sun\\Documents\\pictures_test",
+    "q1": "Combien de personnes?",
+    "r1": "1\\2\\3\\4",
+    "q2": "Ces personnes sont-elles toutes adultes?",
     "r2": "oui\\non",
-    "q3": "q3",
+    "q3": "Aimez-vous cette image?",
     "r3": "oui\\non",
-    "q4": "q4",
-    "r4": "oui\\non",
-    "q5": "q5",
-    "r5": "oui\\non"
+    "q4": "",
+    "r4": "",
+    "q5": "",
+    "r5": ""
 }

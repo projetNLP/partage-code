@@ -15,11 +15,9 @@ def lire_fichier():
 def retrouve_image():
     with open('annotation.json', "r") as f:
         liste_images = json.load(f)
-    liste = []
     for img in liste_images:
         if liste_images[img]["commenté"] == False:
-            liste.append(img)
-    return liste
+            return img
 
 # enregistre les reponses dans le fichier annote, à faire appeler dans l'interface, img est l'entrée de def interface(imge, Q, L)
 def enregistre_reponse(img, L):

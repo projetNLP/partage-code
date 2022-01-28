@@ -3,23 +3,30 @@ from appJar import gui
 import model
 
 app = gui("interface", "1000x700")
-
+Q = model.lire_fichier()[1]
+L = model.lire_fichier()[2]
 
 def suivant():
     L = [app.getOptionBox(f"{i}") for i in range(5)]
-    image_path = model.retrouve_image()[0]
+    image_path = model.retrouve_image()
     model.enregistre_reponse(image_path, L)
-    app.stop()
-
+    image = Image.open(model.lire_fichier()[0] + '/' + model.retrouve_image())
+    image_resize = ImageTk.PhotoImage(image.resize((600, 600)))
+    app.setImageData("pic", image_resize, fmt="PhotoImage")
+    
+def precedent():
+    pass
 
 def interface(image_resize, Q, L):
-    app.setFont(size=20, family="Verdana", underline=False, slant="roman")
+    app.setFont(size=14, family="Verdana", underline=False, slant="roman")
 
     with app.frame("LEFT", row=0, column=0, bg='white', sticky='NEW', stretch='COLUMN'):
         app.addLabel("en-tête", "outil de classification d'images")
         app.setLabelBg("en-tête", "DarkCyan")
         app.setLabelHeight("en-tête", 2)
         app.addImageData("pic", image_resize, fmt="PhotoImage")
+        app.addButton("precedent", precedent)
+        app.setButtonBg("precedent", "firebrick")
 
     with app.frame("RIGHT", row=0, column=1, bg='white', fg='black'):
         for x in range(len(Q)):
@@ -36,9 +43,6 @@ def interface(image_resize, Q, L):
     app.go()
 
 model.init_annotation() # n'utiliser cette ligne que pour la première fois d'annotation pour un répertoire d'images
-Q = model.lire_fichier()[1]
-L = model.lire_fichier()[2]
-for img in model.retrouve_image():
-        image = Image.open(model.lire_fichier()[0] + '/' + img)
-        image_resize = ImageTk.PhotoImage(image.resize((600, 600)))
-        interface(image_resize, Q, L)
+image = Image.open(model.lire_fichier()[0] + '/' + model.retrouve_image())
+image_resize = ImageTk.PhotoImage(image.resize((600, 600)))
+interface(image_resize, Q, L)
