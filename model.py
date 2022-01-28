@@ -63,5 +63,3 @@ def init_annotation(): # initialiser un dossier d'images avec les même question
     
     with open('annotation.json', "w") as f:
         json.dump(dict_json, f, indent=4)
-
-print(lire_fichier())
