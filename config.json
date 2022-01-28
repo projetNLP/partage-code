@@ -1,9 +1,9 @@
 {
-    "lot": "template",
+    "lot": "Lot",
     "path": "C:\\Users\\Sun\\Documents\\pictures_test",
     "q1": "Combien de personnes?",
     "r1": "1\\2\\3\\4",
-    "q2": "Ces personnes sont-elles toutes adultes?",
+    "q2": "Est-ce que les personnes sont adultes?",
     "r2": "oui\\non",
     "q3": "Aimez-vous cette image?",
     "r3": "oui\\non",

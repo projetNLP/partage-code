@@ -52,7 +52,7 @@ def interface(image_resize, Q, L):
 
     app.go()
 
-model.init_annotation() # n'utiliser cette ligne que pour la première fois d'annotation pour un répertoire d'images
+# model.init_annotation() # n'utiliser cette ligne que pour la première fois d'annotation pour un répertoire d'images
 image = Image.open(model.lire_fichier()[0] + '/' + model.retrouve_image())
 image_resize = ImageTk.PhotoImage(image.resize((600, 600)))
 interface(image_resize, Q, L)
