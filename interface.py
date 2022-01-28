@@ -15,18 +15,23 @@ def suivant():
     app.setImageData("pic", image_resize, fmt="PhotoImage")
     
 def precedent():
-    pass
+    Q, L = model.lire_annote_image(image)
+    app.stop()
+    #la ligne suivante à modifier
+    interface(image_resize, Q, L)
 
 def interface(image_resize, Q, L):
     app.setFont(size=14, family="Verdana", underline=False, slant="roman")
 
-    with app.frame("LEFT", row=0, column=0, bg='white', sticky='NEW', stretch='COLUMN'):
+    with app.frame("LEFT", row=0, column=0, bg='white', fg='black'):
         app.addLabel("en-tête", "outil de classification d'images")
         app.setLabelBg("en-tête", "DarkCyan")
-        app.setLabelHeight("en-tête", 2)
+        app.setLabelHeight("en-tête", 1)
         app.addImageData("pic", image_resize, fmt="PhotoImage")
         app.addButton("precedent", precedent)
         app.setButtonBg("precedent", "firebrick")
+        app.setButtonWidth("precedent", 5)
+        app.setButtonHeight("precedent", 1)
 
     with app.frame("RIGHT", row=0, column=1, bg='white', fg='black'):
         for x in range(len(Q)):
@@ -37,7 +42,7 @@ def interface(image_resize, Q, L):
         app.addButton("suivant", suivant)
         app.setButtonFg("suivant", "white")
         app.setButtonBg("suivant", "limegreen")
-        app.setButtonWidth("suivant", 10)
+        app.setButtonWidth("suivant", 5)
         app.setButtonHeight("suivant", 1)
 
     app.go()
