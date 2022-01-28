@@ -16,4 +16,4 @@ Les fichiers index.html et traitement.php forme un formulaire web qui permet aux
 
 2. Il convient ensuite d'utiliser ce fichier en l'ajoutant dans ce répertoire et éxecuter le script interface.py. Les photos cont s'afficher une par une avec les questions correspondantes et les réponses éventuelles, il suffit que l'utilisateur réponde et qu'il clique sur le bouton suivant pour que les réponses soient enregistrées dans le fichier annotation.json.
 
-3. Remarque : la ligne model.init_annotation() ne devrait être exécuter qu'une fois. A partir de le deuxième fois, la commenter.
+3. Remarque : la ligne model.init_annotation() ne devrait être exécuter qu'une fois pour un répertoire donné. A partir de le deuxième fois, la commenter.
