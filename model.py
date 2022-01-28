@@ -1,6 +1,5 @@
 import json
 import os
-from appJar import gui
 
 def lire_fichier():
     with open('config.json', "r") as f:
@@ -12,17 +11,15 @@ def lire_fichier():
             liste_reponses[i] = liste_reponses[i].split('\\')
     return path, liste_questions, liste_reponses
 
-# renvoie une liste des noms d'images
-def recupere_image():
-    return os.listdir(lire_fichier()[0])
-
 # retrouver l'image non commenté
 def retrouve_image():
     with open('annotation.json', "r") as f:
         liste_images = json.load(f)
+    liste = []
     for img in liste_images:
         if liste_images[img]["commenté"] == False:
-            return img
+            liste.append(img)
+    return liste
 
 # enregistre les reponses dans le fichier annote, à faire appeler dans l'interface, img est l'entrée de def interface(imge, Q, L)
 def enregistre_reponse(img, L):
@@ -58,7 +55,7 @@ def init_annotation(): # initialiser un dossier d'images avec les même question
     }
     for count, question in enumerate(lire_fichier()[1]): #on met toutes les images dans le dictionnaire avec le dictionnaire des questions comme un sous-dictionnaire
         dict[f"question {count + 1}"] = question
-    for img in recupere_image():
+    for img in os.listdir(lire_fichier()[0]):
         dict_json[img] = dict
     
     with open('annotation.json', "w") as f:

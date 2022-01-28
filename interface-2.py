@@ -1,42 +1,25 @@
 from PIL import Image, ImageTk
-# from ast import Break
 from appJar import gui
-# from tkinter import Toplevel
-# from tkinter.constants import TOP, UNDERLINE
-# from tkinter.font import families
 import model
 
 app = gui("interface", "1000x700")
-image = ImageTk.PhotoImage(Image.open(
-    model.lire_fichier()[0] + '/' + model.retrouve_image()))
 
-def suivant(image):
-        # R = [True]
-        L = []
-        for x in range(len(Q)):
-            L.append(app.getOptionBox(str(x)))
-        model.enregistre_reponse(image, L)
-        img = ImageTk.PhotoImage(Image.open(
-            model.lire_fichier()[0] + '/' + model.retrouve_image()))
-        app.reloadImageData("pic", img, fmt="PhotoImage")
 
-def retour():
-        R = [False]
-        print(R)
+def suivant():
+    L = [app.getOptionBox(f"{i}") for i in range(5)]
+    image_path = model.retrouve_image()[0]
+    model.enregistre_reponse(image_path, L)
+    app.stop()
 
-def interface(image, Q, L):
+
+def interface(image_resize, Q, L):
     app.setFont(size=20, family="Verdana", underline=False, slant="roman")
 
     with app.frame("LEFT", row=0, column=0, bg='white', sticky='NEW', stretch='COLUMN'):
         app.addLabel("en-tête", "outil de classification d'images")
         app.setLabelBg("en-tête", "DarkCyan")
         app.setLabelHeight("en-tête", 2)
-        app.addImageData("pic", image, fmt="PhotoImage")
-        app.setImageSize("pic", 100, 600)
-
-        app.addButton("Retour", retour)
-        app.setButtonFg("Retour", "white")
-        app.setButtonBg("Retour", "firebrick")
+        app.addImageData("pic", image_resize, fmt="PhotoImage")
 
     with app.frame("RIGHT", row=0, column=1, bg='white', fg='black'):
         for x in range(len(Q)):
@@ -44,7 +27,7 @@ def interface(image, Q, L):
             app.addLabelOptionBox(str(x), ["- select -"]+L[x])
             app.setLabelBg(Q[x], "bisque")
 
-        app.addButton("suivant", suivant(image))
+        app.addButton("suivant", suivant)
         app.setButtonFg("suivant", "white")
         app.setButtonBg("suivant", "limegreen")
         app.setButtonWidth("suivant", 10)
@@ -52,7 +35,10 @@ def interface(image, Q, L):
 
     app.go()
 
-
+# model.init_annotation() # n'utiliser cette ligne que pour la première fois d'annotation pour un répertoire d'images
 Q = model.lire_fichier()[1]
 L = model.lire_fichier()[2]
-interface(image, Q, L)
+for img in model.retrouve_image():
+        image = Image.open(model.lire_fichier()[0] + '/' + img)
+        image_resize = ImageTk.PhotoImage(image.resize((600, 600)))
+        interface(image_resize, Q, L)
